@@ -1,0 +1,250 @@
+.info__border {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.info__border--two {
+  padding-bottom: 19px;
+}
+
+.info__wrapper {
+  .wrapper();
+}
+
+.info__title {
+  margin: 27px auto 37px 0;
+  .oswald;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  color: #000000;
+}
+
+.info__text {
+  max-width: 228px;
+  margin: 0 auto 39px 0;
+  .oswald;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.info__group {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  border: none;
+  .oswald;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: @darkgrey;
+}
+
+.info__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 13px;
+  text-transform: uppercase;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.info__input {
+  display: block;
+  box-sizing: border-box;
+  padding: 13px 15px;
+  height: 45px;
+  outline: 1px solid #e7e7e7;
+  border: none;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-transform: inherit;
+}
+
+.info__input--name {
+  width: 228px;
+}
+
+.info__input--weight {
+  width: 191px;
+}
+
+.info__input--age {
+  width: 172px;
+}
+
+.info__input--mail {
+  width: 219px;
+  background-image: url("../../img/form/mail.svg");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+}
+
+.info__input--tel {
+  width: 204px;
+  background-image: url("../../img/form/phone.svg");
+  background-repeat: no-repeat;
+  background-position: right 13px center;
+}
+
+.info__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-top: 22px;
+  padding: 0;
+  color: @darkgrey-2;
+  text-transform: uppercase;
+  list-style-type: none;
+}
+
+.info__list--addition {
+  margin-top: 34px;
+  margin-bottom: 34px;
+  color: #000000;
+}
+
+.info__list-item {
+  margin-bottom: 24px;
+
+  &:last-child {
+    margin-bottom: 6px;
+  }
+}
+
+.info__control {
+  display: block;
+  padding-left: 46px;
+  position: relative;
+}
+
+.info__control-mark {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  outline: 1px solid #cdcdcd;
+}
+
+.info__control-input[type="radio"]+.info__control-mark {
+  border-radius: 50%;
+}
+
+.info__control-input[type="radio"]:checked+.info__control-mark {
+  &::after {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 14px;
+    height: 14px;
+    background-color: #68b738;
+    border-radius: 50%;
+    content: "";
+  }
+}
+
+.info__control-input[type="checkbox"]:checked+.info__control-mark {
+  background-image: url("../../img/form/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.info__person {
+  width: 187px;
+  margin: 0;
+  margin-top: 26px;
+  margin-bottom: 35px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 16px;
+    right: -113px;
+    width: 99px;
+    height: 2px;
+    background-color: #68b738;
+    content: "";
+  }
+}
+
+.info__comment {
+  width: 121px;
+  margin: 0;
+  margin-top: 26px;
+  margin-bottom: 38px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 14px;
+    right: -179px;
+    width: 158px;
+    height: 2px;
+    background-color: #68b738;
+    content: "";
+  }
+}
+
+.info__addition {
+  width: 141px;
+  margin: 0;
+  margin-top: 23px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 14px;
+    right: -159px;
+    width: 136px;
+    height: 2px;
+    background-color: #68b738;
+    content: "";
+  }
+}
+
+.info__comment-text {
+  display: block;
+  width: 280px;
+  height: 150px;
+  border: none;
+  outline: 1px solid #e7e7e7;
+  box-sizing: border-box;
+  padding: 9px 14px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: @darkgrey;
+  text-transform: uppercase;
+  resize: none;
+}
+
+.info__warning {
+  margin: 0 auto;
+  margin-top: 21px;
+  margin-bottom: 32px;
+  .arial;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}

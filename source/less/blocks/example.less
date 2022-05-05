@@ -1,0 +1,151 @@
+.example {
+  position: relative;
+  color: #000000;
+  .oswald;
+  background-color: @lightgrey-2;
+}
+
+.example__wrapper {
+  display: flex;
+  flex-direction: column;
+  .wrapper();
+}
+
+.example__title-example {
+  margin: 0;
+  margin-top: 25px;
+  margin-right: auto;
+  margin-bottom: 40px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.example__text-example {
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  .arial;
+  color: @darkgrey;
+}
+
+.example__combination {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 280px;
+}
+
+.example__parametr {
+  display: block;
+  margin-bottom: 34px;
+  width: 124px;
+  padding-top: 14px;
+  padding-bottom: 18px;
+  outline: 1px solid #cdcdcd;
+  border-radius: 3px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  position: relative;
+}
+
+.example__parametr--weight {
+  &::before {
+    content: "снижение веса";
+    display: block;
+    position: absolute;
+    bottom: -15px;
+    left: 21px;
+    width: 82px;
+    height: 24px;
+    background-color: @lightgrey-2;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    text-align: center;
+    .arial;
+    color: @darkgrey;
+  }
+}
+
+.example__parametr--day {
+  &::before {
+    content: "затрачено времени";
+    display: block;
+    position: absolute;
+    bottom: -15px;
+    left: 21px;
+    width: 82px;
+    height: 24px;
+    background-color: @lightgrey-2;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    text-align: center;
+    .arial;
+    color: @darkgrey;
+  }
+}
+
+.example__spend {
+  margin: 0 auto;
+  margin-bottom: 40px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.example__results-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.example__img-results {
+  margin-bottom: 15px;
+}
+
+.example__filter-results {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 210px;
+  margin-bottom: 40px;
+}
+
+.example__range-results {
+  display: block;
+  margin: 8px 0;
+  width: 86px;
+  height: 14px;
+  outline: 1px solid #cdcdcd;
+  border-radius: 6px;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.example__toggle {
+  display: block;
+  margin: 4px 0;
+  margin-left: 6px;
+  margin-right: 44px;
+  width: 36px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: #68b738;
+  position: relative;
+  cursor: pointer;
+}
+
+.example__results {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
