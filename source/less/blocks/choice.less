@@ -1,0 +1,134 @@
+.choice {
+  margin-bottom: 20px;
+  position: relative;
+  color: #000000;
+  .oswald;
+}
+
+.choice__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  .wrapper();
+}
+
+.choice__item {
+  max-width: 280px;
+  padding: 0 20px;
+  background: #f2f2f2;
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.choice__title-mini {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  position: relative;
+}
+
+.choice__title-mini--first {
+  width: 110px;
+  margin: 30px 59px 29px 71px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: -69px;
+    width: 50px;
+    height: 53px;
+    background-image: url("../../img/index/cat_back.svg");
+    background-repeat: no-repeat;
+    background-size: 50px 53px;
+  }
+}
+
+.choice__title-mini--end {
+  width: 137px;
+  margin: 30px 52px 29px 71px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -6px;
+    left: -78px;
+    width: 67px;
+    height: 50px;
+    background-image: url("../../img/index/tiger_back.svg");
+    background-repeat: no-repeat;
+    background-size: 67px 50px;
+  }
+}
+
+.choice__text-program {
+  .arial;
+  font-size: 14px;
+  line-height: 18px;
+  color: @darkgrey;
+  margin-bottom: 23px;
+}
+
+.choice__title-mini--first {
+  width: 227px;
+}
+
+.choice__line {
+  width: 240px;
+  height: 1px;
+  background-color: #d9d9d9;
+}
+
+.choice__link-program {
+  display: block;
+  margin-top: 19px;
+  margin-bottom: 22px;
+  margin-right: auto;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 16px;
+  color: #000000;
+  position: relative;
+  cursor: pointer;
+}
+
+.choice__link-program--first {
+  width: 87px;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 3px;
+    right: -39px;
+    width: 24px;
+    height: 12px;
+    background-image: url("../../img/index/icon_arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 24px 12px;
+  }
+}
+
+.choice__link-program--end {
+  width: 83px;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 3px;
+    right: -41px;
+    width: 24px;
+    height: 12px;
+    background-image: url("../../img/index/icon_arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 24px 12px;
+  }
+}
