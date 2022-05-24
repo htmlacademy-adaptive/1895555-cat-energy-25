@@ -1,16 +1,40 @@
 .program {
   margin-bottom: 20px;
-  background-image: url("../../img/index/cat_eat.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  position: relative;
-  z-index: 1;
   color: #ffffff;
   .oswald;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    color: #000000;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 82px;
+  }
 }
 
 .program__wrapper {
-  &::before {
+  .wrapper();
+}
+
+.program__clamping {
+  @media (min-width: @tablet-width) {
+    padding-left: 91px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 80px;
+  }
+}
+
+.program__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 27px;
+  position: relative;
+
+  &::after {
     content: "";
     display: block;
     width: 320px;
@@ -18,39 +42,157 @@
     background: #68b738d9;
     position: absolute;
     top: 0;
-    left: 0;
+    left: -20px;
     z-index: -1;
   }
 
-  .wrapper();
+  &::before {
+    content: "";
+    display: block;
+    width: 320px;
+    height: 302px;
+    background-image: url("../../img/index/cat_eat320.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    position: absolute;
+    left: -20px;
+    top: 0;
+    z-index: -2;
+  }
+
+  @media (min-resolution: 2dppx) {
+    &::before {
+      background-image: url("../../img/index/cat_eat640.jpg");
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 62px;
+    align-items: flex-start;
+
+    &::before {
+      background-image: none;
+    }
+
+    &::after {
+      background: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 114px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 720px;
+      height: 694px;
+      background: #68b738d9;
+      position: absolute;
+      top: -112px;
+      left: 530px;
+      z-index: -1;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 720px;
+      height: 694px;
+      background-image: url("../../img/index/cat_eat_desktop.jpg");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      position: absolute;
+      left: 530px;
+      top: -112px;
+      z-index: -2;
+    }
+  }
 }
 
 .program__title {
   width: 250px;
-  margin: 0 auto;
-  margin-top: 27px;
+  margin: 0;
   margin-bottom: 25px;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 420px;
+    margin-bottom: 41px;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: start;
+  }
 }
 
 .program__slogan {
   margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 302px;
   font-size: 14px;
   line-height: 14px;
   text-align: center;
   text-transform: uppercase;
-}
+  position: relative;
 
-.program__images-page {
-  margin-bottom: 3px;
+  &::before {
+    content: "";
+    display: block;
+    width: 280px;
+    height: 270px;
+    position: absolute;
+    background-image: url("../../img/index/main_bank.png");
+    background-repeat: no-repeat;
+    background-size: 105% auto;
+    top: 42px;
+    right: -24px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 284px;
+    margin-bottom: 49px;
+    font-size: 20px;
+    line-height: 20px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 709px;
+      height: 609px;
+      position: absolute;
+      background-image: url("../../img/index/main_bank_tablet.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: 35px;
+      left: -92px;
+      z-index: -1;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 52px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 552px;
+      height: 499px;
+      position: absolute;
+      background-image: url("../../img/index/main_bank_desktop.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: -245px;
+      left: 370px;
+      z-index: 1;
+    }
+  }
 }
 
 .program__choice-button {
   display: block;
+  width: 100%;
   padding: 7px 0;
   line-height: 26px;
   text-align: center;
@@ -60,4 +202,24 @@
   background-color: #68b738;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 244px;
+    margin-bottom: 526px;
+    padding: 14px 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 185px;
+  }
 }
