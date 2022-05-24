@@ -9,13 +9,22 @@ img {
 }
 
 .page {
-  width: 320px;
+  width: @mobile-mobile;
   height: 100%;
   margin: 0 auto;
   font-size: 14px;
   .oswald;
   line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
 }
+
 
 .page__body {
   min-height: 100%;
@@ -56,9 +65,31 @@ img {
   color: @light;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .button-order--active {
   color: @darkgrey;
   background: @lightgrey;
+}
+
+.button-order-add {
+  @media (min-width: @tablet-width) {
+    display: block;
+    width: 282px;
+    padding: 14px;
+    font-size: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 568px;
+    padding: 13px 0;
+  }
 }

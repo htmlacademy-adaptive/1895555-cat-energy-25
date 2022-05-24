@@ -7,18 +7,30 @@
     display: block;
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: -20px;
     width: 320px;
     height: 1px;
     background-color: #ebebeb;
   }
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    outline: 1px solid @lightgrey;
+
+    &::before {
+      content: none;
+    }
+
+    &::after {
+      content: none;
+    }
+  }
 }
 
-.more__wrapper-card {
+.more__block {
   display: flex;
   flex-direction: column;
   align-items: center;
-  .wrapper();
 }
 
 .more__img {
@@ -42,6 +54,19 @@
   &::before {
     transform: rotate(90deg);
   }
+
+  @media (min-width: @tablet-width) {
+    width: 60px;
+    height: 60px;
+    margin-top: 52px;
+    margin-bottom: 49px;
+
+    &::before,
+    &::after {
+      width: 60px;
+      top: 30px;
+    }
+  }
 }
 
 .more__text-bold {
@@ -53,6 +78,14 @@
   font-size: 16px;
   line-height: 20px;
   color: #111111;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 23px;
+    width: 134px;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+  }
 }
 
 .more__text {
@@ -63,4 +96,32 @@
   font-size: 12px;
   line-height: 16px;
   color: @darkgrey;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 87px;
+    text-align: center;
+    width: 167px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.more__button {
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    background-color: #ebebeb;
+    color: rgba(68, 68, 68, 0.3);
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+    width: 249px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 169px;
+  }
 }

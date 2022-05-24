@@ -1,0 +1,95 @@
+.talk__wrapper {
+  .wrapper-form();
+}
+
+.talk__line {
+  display: block;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    background-color: #68b738;
+    z-index: -1;
+  }
+}
+
+.talk__line h3 {
+  padding-left: 19px;
+  background-color: @light;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 39px;
+    margin-left: 30px;
+    background-color: @light;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 40px;
+    margin-left: 70px;
+    background-color: @light;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.talk__comment {
+  width: 121px;
+  margin: 0;
+  margin-bottom: 38px;
+  padding-right: 22px;
+
+  @media (min-width: @tablet-width) {
+    width: 182px;
+    margin-bottom: 76px;
+    padding-right: 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 182px;
+    margin-bottom: 76px;
+    padding-right: 40px;
+  }
+}
+
+.talk__comment-text {
+  display: block;
+  width: 100%;
+  height: 150px;
+  border: none;
+  outline: 1px solid #e7e7e7;
+  box-sizing: border-box;
+  padding: 9px 14px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: @darkgrey;
+  text-transform: uppercase;
+  resize: none;
+
+  &:hover {
+    outline: 1px solid #bababa;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    height: 174px;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 19px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
+}

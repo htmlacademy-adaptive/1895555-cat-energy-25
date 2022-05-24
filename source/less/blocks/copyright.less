@@ -1,28 +1,41 @@
-.copyright {
+.copyright__link {
   display: flex;
   width: 281px;
   justify-content: space-between;
   align-items: center;
-}
+  margin-bottom: 19px;
+  text-decoration: none;
 
-.copyright__link {
-  display: block;
-  width: 27px;
-  height: 34px;
-  background-image: url("../../img/index/logo_html.svg");
-  background-repeat: no-repeat;
-  background-size: 27px 34px;
+
+  @media (min-width: @tablet-width) {
+    width: 163px;
+    margin: 0;
+  }
 }
 
 .copyright__text {
+  min-width: 115px;
+  margin: 0;
   .arial();
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   color: @darkgrey;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.copyright__img {
+.copyright__logo-academy {
   fill: #666666;
+
+  &:hover {
+    fill: #68b738;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

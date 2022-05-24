@@ -1,0 +1,262 @@
+.group__wrapper {
+  .wrapper-form();
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.group__one {
+  position: relative;
+  margin-bottom: 52px;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 320px;
+    height: 1px;
+    background-color: #d9d9d9;
+    bottom: -24px;
+    left: -20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 72px;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 569px;
+    margin-bottom: 0;
+  }
+}
+
+.group__part {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  border: none;
+  .oswald;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: @darkgrey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.group__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 13px;
+  text-transform: uppercase;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.group__input {
+  display: block;
+  box-sizing: border-box;
+  padding: 13px 15px;
+  height: 45px;
+  outline: 1px solid #e7e7e7;
+  border: none;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-transform: inherit;
+
+  &:hover {
+    outline: 1px solid #cdcdcd;
+  }
+
+  &:focus {
+    outline: 1px solid @darkgrey;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 52px;
+  }
+}
+
+.group__input--name {
+  width: 228px;
+
+  @media (min-width: @tablet-width) {
+    width: 567px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 506px;
+  }
+}
+
+.group__input--weight {
+  width: 191px;
+
+  @media (min-width: @tablet-width) {
+    width: 536px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 475px;
+  }
+}
+
+.group__input--age {
+  width: 172px;
+
+  @media (min-width: @tablet-width) {
+    width: 497px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 436px;
+  }
+}
+
+.group__two {
+  position: relative;
+  margin-bottom: 45px;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 320px;
+    height: 1px;
+    background-color: #d9d9d9;
+    bottom: -19px;
+    left: -20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    outline: 1px solid #e7e7e7;
+    margin-bottom: 75px;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 568px;
+    outline: 1px solid #e7e7e7;
+    margin-bottom: 0;
+  }
+}
+
+.group__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  color: @darkgrey-2;
+  text-transform: uppercase;
+  list-style-type: none;
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}
+
+.group__list-item {
+  margin-bottom: 24px;
+
+  &:last-child {
+    margin-bottom: 6px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &:first-child {
+      margin-top: 30px;
+    }
+
+    &:last-child {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.group__control {
+  display: block;
+  padding-left: 46px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 88px;
+  }
+}
+
+.group__control-mark {
+  position: absolute;
+  top: -7px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  outline: 1px solid #cdcdcd;
+
+  &:hover {
+    outline: 1px solid #bababa;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: -5px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    outline: 1px solid #cdcdcd;
+  }
+}
+
+.group__control-input[type="radio"] + .group__control-mark {
+  border-radius: 50%;
+}
+
+.group__control-input[type="radio"]:checked + .group__control-mark {
+  &::after {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 14px;
+    height: 14px;
+    background-color: #68b738;
+    border-radius: 50%;
+    content: "";
+  }
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      position: absolute;
+      top: 11px;
+      left: 11px;
+      width: 18px;
+      height: 18px;
+      background-color: #68b738;
+      border-radius: 50%;
+      content: "";
+    }
+  }
+}
