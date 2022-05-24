@@ -70,9 +70,10 @@ const createWebp = () => {
 // SVG
 
 const svg = () =>
-gulp.src(['source/img/**/*.svg', '!source/img/sprite.svg'])
-.pipe(svgo())
-.pipe(gulp.dest('build/img'));
+  gulp.src(['source/img/**/*.svg', '!source/img/sprite.svg'])
+  .pipe(svgo())
+  .pipe(gulp.dest('build/img')
+);
 
 // Copy
 
@@ -130,11 +131,11 @@ export const build = gulp.series(
   copy,
   optimizeImages,
   gulp.parallel(
-  styles,
-  html,
-  scripts,
-  svg,
-  createWebp),
+    styles,
+    html,
+    scripts,
+    svg,
+    createWebp),
 );
 
 // Default
@@ -144,11 +145,12 @@ export default gulp.series(
   copy,
   copyImages,
   gulp.parallel(
-   styles,
-   html,
-   scripts,
-   svg,
-   createWebp),
+    styles,
+    html,
+    scripts,
+    svg,
+    createWebp),
   gulp.series(
-   server,
-   watcher));
+    server,
+    watcher)
+);
