@@ -1,14 +1,17 @@
 .program {
+  margin: 0 auto;
   margin-bottom: 20px;
   color: #ffffff;
   .oswald;
 
   @media (min-width: @tablet-width) {
+    width: @tablet-width;
     margin-bottom: 0;
     color: #000000;
   }
 
   @media (min-width: @desktop-width) {
+    width: @desktop-width;
     margin-bottom: 82px;
   }
 }
@@ -18,8 +21,10 @@
 }
 
 .program__clamping {
+  margin: 0 auto;
+
   @media (min-width: @tablet-width) {
-    padding-left: 91px;
+    padding-left: 87px;
   }
 
   @media (min-width: @desktop-width) {
@@ -28,6 +33,7 @@
 }
 
 .program__header {
+  width: 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,6 +58,7 @@
     width: 320px;
     height: 302px;
     background-image: url("../../img/index/cat_eat320.jpg");
+    background-color: #68b738d9;
     background-repeat: no-repeat;
     background-size: 100% auto;
     position: absolute;
@@ -72,6 +79,7 @@
 
     &::before {
       background-image: none;
+      background-color: #ffffff;
     }
 
     &::after {
@@ -80,7 +88,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 114px;
+    padding-top: 110px;
 
     &::after {
       content: "";
@@ -102,6 +110,7 @@
       background-image: url("../../img/index/cat_eat_desktop.jpg");
       background-repeat: no-repeat;
       background-size: 100% auto;
+      background-color: #68b738d9;
       position: absolute;
       left: 530px;
       top: -112px;
@@ -165,8 +174,8 @@
       background-image: url("../../img/index/main_bank_tablet.png");
       background-repeat: no-repeat;
       background-size: cover;
-      top: 35px;
-      left: -92px;
+      top: 40px;
+      left: -90px;
       z-index: -1;
     }
   }
@@ -214,7 +223,7 @@
   @media (min-width: @tablet-width) {
     width: 244px;
     margin-bottom: 526px;
-    padding: 14px 0;
+    padding: 17px 2px;
     font-size: 20px;
     line-height: 20px;
   }

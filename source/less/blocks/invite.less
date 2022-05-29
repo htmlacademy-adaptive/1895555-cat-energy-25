@@ -8,8 +8,26 @@
   background-color: @lightgrey;
 }
 
+.invite__union {
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
+}
+
 .invite__wrapper {
+  margin: 0 auto;
   .wrapper();
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
 }
 
 .invite__adress-invite {
@@ -22,8 +40,8 @@
 
   @media (min-width: @tablet-width) {
     padding: 0 40px;
-    margin-top: 56px;
-    margin-bottom: 56px;
+    margin-top: 59px;
+    margin-bottom: 62px;
   }
 
   @media (min-width: @desktop-width) {
@@ -95,11 +113,17 @@
 .invite__part {
   @media (min-width: @tablet-width) {
     display: block;
-    margin-top: 16px;
+    margin-top: 18px;
   }
 }
 
 .invite__map {
+  border: none;
   display: block;
   max-width: 100%;
+  height: 362px;
+
+  @media (min-width: @tablet-width) {
+    height: 400px;
+  }
 }

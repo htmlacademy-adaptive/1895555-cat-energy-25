@@ -1,15 +1,19 @@
 .choice {
+  margin: 0 auto;
   margin-bottom: 20px;
+  width: 320px;
   position: relative;
   color: #000000;
   .oswald;
 
   @media (min-width: @tablet-width) {
+    width: @tablet-width;
     margin-bottom: 45px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 82px;
+    width: @desktop-width;
+    margin-bottom: 72px;
   }
 }
 
@@ -88,8 +92,8 @@
       content: "";
       display: block;
       position: absolute;
-      top: 4px;
-      left: 400px;
+      top: 2px;
+      left: 395px;
       width: 200px;
       height: 211px;
       background-image: url("../../img/index/cat_back.svg");
@@ -147,11 +151,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin: 77px auto 73px 181px;
+    margin: 77px auto 73px 162px;
 
     &::before {
-      top: -35px;
-      left: -200px;
+      top: -30px;
+      left: -180px;
       width: 134px;
       height: 100px;
       background-size: 134px 100px;
@@ -246,7 +250,7 @@
     content: "";
     display: block;
     position: absolute;
-    top: 3px;
+    top: 2px;
     right: -39px;
     width: 24px;
     height: 12px;
@@ -285,7 +289,7 @@
     content: "";
     display: block;
     position: absolute;
-    top: 3px;
+    top: 2px;
     right: -41px;
     width: 24px;
     height: 12px;

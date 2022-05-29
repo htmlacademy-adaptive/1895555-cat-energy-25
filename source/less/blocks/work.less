@@ -5,8 +5,7 @@
   .oswald;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 46px;
-    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 8px;
 
     &::after {
       content: "";
@@ -15,12 +14,12 @@
       width: 100%;
       height: 1px;
       background-color: #e6e6e6;
-      bottom: 0;
+      bottom: 1px;
     }
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 26px;
+    padding-bottom: 0;
     border-bottom: none;
 
     &::after {
@@ -30,6 +29,19 @@
 }
 
 .work__wrapper {
+  margin: 0 auto;
+  width: 320px;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
+}
+
+.work__wrapper-union {
   .wrapper();
 }
 
@@ -58,7 +70,7 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 137px;
+    column-gap: 62px;
     row-gap: 37px;
     counter-reset: work;
   }
@@ -74,7 +86,7 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 
   @media (max-width: 767px) {
     &:last-child {
@@ -85,12 +97,13 @@
   @media (min-width: @tablet-width) {
     counter-increment: work;
     flex-direction: column;
+    justify-content: flex-start;
     margin-bottom: 97px;
 
     &::before {
       content: counter(work);
       position: absolute;
-      right: 36px;
+      right: 77px;
       bottom: 75px;
       font-size: 280px;
       color: @lightgrey;
@@ -105,7 +118,7 @@
     &::before {
       content: counter(work);
       position: absolute;
-      right: 16px;
+      right: -3px;
       bottom: 75px;
       font-size: 280px;
       color: @lightgrey;

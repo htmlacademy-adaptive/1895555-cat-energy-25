@@ -2,6 +2,19 @@
   background-color: @lightgrey;
 }
 
+.main-footer__union {
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
+}
+
 .main-footer__wrapper {
   display: flex;
   flex-direction: column;
@@ -15,7 +28,7 @@
   }
 }
 
-.main-footer__logo-footer {
+.main-footer__logo-link {
   margin-top: 39px;
   margin-bottom: 52px;
   position: relative;
@@ -33,7 +46,7 @@
     display: block;
     position: absolute;
     left: -76px;
-    bottom: -32px;
+    bottom: -30px;
     width: 280px;
     height: 1px;
     background-color: #d9d9d9;
