@@ -7,9 +7,34 @@
     width: 100%;
     height: 2px;
     position: absolute;
-    top: 50%;
+    top: 30%;
     background-color: #68b738;
     z-index: -1;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      top: 60%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::after {
+      top: 55%;
+    }
+  }
+}
+
+.data__union {
+  margin: 0 auto;
+  width: 320px;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
   }
 }
 
@@ -60,6 +85,10 @@
 
 .data__wrapper {
   .wrapper-form();
+
+  @media (min-width: @desktop-width) {
+    padding: 0 111px;
+  }
 }
 
 .data__group {
@@ -117,9 +146,18 @@
   outline: 1px solid #e7e7e7;
   border: none;
   font-weight: inherit;
-  font-size: inherit;
-  line-height: inherit;
+  font-size: 16px;
+  line-height: 18px;
   text-transform: inherit;
+  .oswald;
+  color: @darkgrey;
+
+  &::placeholder {
+    color: @darkgrey;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
 
   &:hover {
     outline: 1px solid #cdcdcd;
@@ -129,9 +167,22 @@
     outline: 1px solid @darkgrey;
   }
 
+  &:focus::placeholder {
+    opacity: 0;
+  }
+
+  &:invalid {
+    outline: 1px solid #ff8282;
+  }
+
   @media (min-width: @tablet-width) {
-    padding: 10px 51px 10px 15px;
+    padding: 10px 51px 10px 22px;
     height: 52px;
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 }
 
@@ -145,8 +196,13 @@
     background-image: url("../../img/form/mail_hover.svg");
   }
 
+  &:invalid {
+    background-image: url("../../img/form/mail_invalid.svg");
+  }
+
   @media (min-width: @tablet-width) {
     width: 551px;
+    background-position: right 18px center;
   }
 
   @media (min-width: @desktop-width) {
@@ -164,8 +220,13 @@
     background-image: url("../../img/form/phone_hover.svg");
   }
 
+  &:invalid {
+    background-image: url("../../img/form/phone_invalid.svg");
+  }
+
   @media (min-width: @tablet-width) {
     width: 535px;
+    background-position: right 18px center;
   }
 
   @media (min-width: @desktop-width) {

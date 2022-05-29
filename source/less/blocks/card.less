@@ -1,4 +1,23 @@
+.card__union {
+  margin: 0 auto;
+  width: 320px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: @tablet-width) {
+  .card__wrapper {
+    padding: 0 20px;
+  }
+}
+
+
 .card__block {
+  padding-top: 19px;
+  padding-bottom: 25px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -7,6 +26,7 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
+    padding: 0;
     display: flex;
     flex-direction: column;
     background-color: @lightgrey;
@@ -21,7 +41,7 @@
   @media (min-width: @tablet-width) {
     position: absolute;
     width: 168px;
-    height: 200px;
+    height: 202px;
     top: -73px;
   }
 
@@ -69,7 +89,7 @@
 
   @media (min-width: @desktop-width) {
     width: 169px;
-    margin: 162px 40px 36px 33px;
+    margin: 162px 36px 33px 40px;
   }
 }
 
@@ -91,7 +111,12 @@
     margin-bottom: 21px;
     text-align: center;
     font-size: 20px;
-    line-height: 21px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+    line-height: 22px;
   }
 }
 
@@ -107,6 +132,7 @@
 }
 
 .card__item {
+  width: 140px;
   display: flex;
   justify-content: space-between;
   .arial;
@@ -116,9 +142,9 @@
   line-height: 15px;
 
   @media (min-width: @tablet-width) {
-    width: 250px;
+    width: 251px;
     margin: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
     font-size: 16px;
     line-height: 16px;
 
@@ -140,14 +166,21 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 180px;
+    width: 169px;
     margin-bottom: 16px;
   }
 }
 
 .card__button {
   @media (min-width: @tablet-width) {
+    width: 248px;
+    margin: 0;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
     width: 168px;
-    margin: 0 38px 40px 39px;
+    margin: 0;
+    margin-bottom: 40px;
   }
 }

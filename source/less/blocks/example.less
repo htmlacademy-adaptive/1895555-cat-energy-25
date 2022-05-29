@@ -9,39 +9,82 @@
   }
 }
 
+.example__union {
+  margin: 0 auto;
+  width: 320px;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
+}
+
+.example__union-desktop {
+  margin: 0 auto;
+  background: #eaeaea;
+
+  @media (min-width: @tablet-width) {
+    background: @light;
+  }
+
+  @media (min-width: @desktop-width) {
+    background: @lightgrey;
+  }
+}
+
 .example__wrapper {
   .wrapper();
 }
 
 .example__wrapper--results {
   @media (min-width: @desktop-width) {
+    width: 591px;
     padding: 0;
     padding-right: 110px;
   }
 }
 
-.example__desktop {
+.example__desktop-group {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 
   @media (min-width: @desktop-width) {
+    width: @desktop-width;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    background: @lightgrey;
+  }
+}
+
+.example__desktop-block {
+  @media (min-width: @tablet-width) {
+    background: @lightgrey-2;
+  }
+
+  @media (min-width: @desktop-width) {
     background: @lightgrey;
   }
 }
 
 .example__text-block {
+  margin: 0 auto;
+  width: 320px;
   display: flex;
   flex-direction: column;
   margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
+    width: @tablet-width;
     margin-bottom: 255px;
   }
 
   @media (min-width: @desktop-width) {
+    width: 100%;
+    margin-right: 83px;
     margin-bottom: 75px;
   }
 }
@@ -50,7 +93,7 @@
   margin: 0;
   margin-top: 25px;
   margin-right: auto;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
@@ -120,12 +163,13 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 55px;
+    margin-bottom: 60px;
   }
 }
 
 .example__parametr {
   display: block;
+  margin: 0;
   margin-bottom: 34px;
   width: 124px;
   padding-top: 14px;
@@ -259,15 +303,19 @@
 }
 
 .example__results-item {
+  margin: 0 auto;
+  width: 320px;
   display: flex;
   flex-direction: column;
   position: relative;
 
   @media (min-width: @tablet-width) {
+    width: @tablet-width;
     background-color: @lightgrey-2;
   }
 
   @media (min-width: @desktop-width) {
+    width: @desktop-width;
     background-color: @lightgrey;
   }
 }
@@ -300,9 +348,9 @@
 
   @media (min-width: @tablet-width) {
     width: 592px;
-    margin-top: 366px;
+    margin-top: 370px;
     align-items: center;
-    margin-bottom: 55px;
+    margin-bottom: 60px;
   }
 
   @media (min-width: @desktop-width) {
